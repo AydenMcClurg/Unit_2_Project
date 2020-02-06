@@ -51,6 +51,10 @@ donorTable += "<th>Date</th><th>Name</th><th>Address</th>";
 donorTable += "<th>Phone</th><th>E-mail</th>";
 donorTable += "</tr>";
 
+//puts rows for donors
+majorDonors.forEach(writeDonorRow);
+donorTable += "<table>";
+document.getElementById("donorTable").innerHTML = donorTable;
 
 
 
