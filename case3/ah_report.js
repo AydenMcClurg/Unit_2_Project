@@ -29,6 +29,27 @@
 */
 
 
+// sets total to 0
+var donationTotal = 0;
+// this will find the total
+donors.forEach(calcSum);
+var summaryTable = "<table>";
+summaryTable += "<tr><th>Donors</th><td>" + donors.length + "</td></tr>";
+summaryTable += "<tr><th>Total Donations</th><td>$" + donationTotal.toLocaleString() + "</td></tr>";
+summaryTable += "</table>";
+document.getElementById("donationSummary").innerHTML = summaryTable;
+// finds biggest donation amounts out of the array
+var majorDonors = donors.filter(findMajorDonors);
+// sorts donations in descending order
+majorDonors.sort(donorSortDescending);
+
+var donorTable = "<table>";
+donorTable += "<caption>Major Donors";
+donorTable += "<tr>";
+donorTable += "<th>Donation</th><th>Donor ID</th>";
+donorTable += "<th>Date</th><th>Name</th><th>Address</th>";
+donorTable += "<th>Phone</th><th>E-mail</th>";
+donorTable += "</tr>";
 
 
 
